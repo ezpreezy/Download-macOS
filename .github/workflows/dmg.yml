@@ -203,7 +203,7 @@ jobs:
           path: "~/Desktop/Sonoma.dmg"
 
   re-run-failed-jobs:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     needs: [build-dmg]
     if: always() && (needs.build-dmg.result == 'failure')
     steps:
